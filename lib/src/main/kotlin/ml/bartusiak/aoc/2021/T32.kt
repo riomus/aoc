@@ -16,7 +16,7 @@ object T32: AOCTask{
         return oxygen.joinToString("").toInt(2)*co2.joinToString("").toInt(2)
     }
 
-    private fun filterLines(lines: List<List<Int>>, index: Int, modifier: Int):List<Int> {
+    private tailrec fun filterLines(lines: List<List<Int>>, index: Int, modifier: Int):List<Int> {
         if(lines.size==1){
             return lines.first()
         }
