@@ -34,13 +34,7 @@ object T51: AOCTask{
             Line(lineData[0][0], lineData[0][1], lineData[1][0], lineData[1][1])
         }
 
-        val result: Map<Int, Map<Int, Int>> = ventLines.flatMap { it.points(includeDiagonal) }.fold(mapOf<Int,Map<Int, Int>>()) { map, point ->
-            val column = map.getOrDefault(point.first, mapOf<Int, Int>())
-            val currentValue = column.getOrDefault(point.second, 0)
-            map + Pair(point.first, (column + Pair(point.second, currentValue + 1)))
-        }
-
-        return result.values.flatMap { it.values }.count { it>1 }
+        return ventLines.flatMap { it.points(includeDiagonal) }.groupingBy { it }.eachCount().count { it.value>1 }
     }
 
 
