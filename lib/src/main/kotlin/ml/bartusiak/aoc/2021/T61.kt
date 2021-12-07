@@ -6,6 +6,7 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.sign
 
+import kotlin.reflect.KFunction1
 object T61: AOCTask{
 
     fun solve(file: String = "T6.txt", days: Int = 80): Long {
@@ -19,14 +20,15 @@ object T61: AOCTask{
                     listOf(Pair(entry.key-1, entry.value))
                 }
             }
-            val partialResult = newPopulation.groupingBy { it.first }.fold(0L){acc, element ->
+            newPopulation.groupingBy { it.first }.fold(0L){acc, element ->
                 acc+element.second
             }
-            partialResult
         }
 
         return result.values.sum()
         }
-    }
+}
+
+
 
 
