@@ -38,6 +38,7 @@ object T82: AOCTask{
                 knownNumbers[2] = codes.find { it.size==5 && (it.subtract(knownNumbers[4]!!)).size == 3 }!!
                 codes.remove(knownNumbers[2])
                 knownNumbers[5] = codes.find { it.size==5 }!!
+                codes.remove(knownNumbers[5])
 
                 val codesMap = knownNumbers.entries.associate { it.value to it.key }
                 display.mapIndexed{index, data ->
