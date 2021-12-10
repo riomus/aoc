@@ -34,13 +34,13 @@ class T92: T91() {
     private tailrec  fun visit(pointsToVisit: Set<Pair<Int, Int>>, visited: Set<Pair<Int, Int>>,
                                currentSize: Int, data: Map<Int, Map<Int, Int>>): Pair<Int, Set<Pair<Int, Int>>> {
 
-        val yetNotVisited = pointsToVisit.filterNot { visited.contains(it) }.filterNot { (x, y) -> data[x]!![y]!! ==9 }.toSet()
+        val yetNotVisited = pointsToVisit.asSequence().filterNot { visited.contains(it) }.filterNot { (x, y) -> data[x]!![y]!! ==9 }.toSet()
 
         return if (yetNotVisited.isEmpty()) {
             Pair(currentSize, visited)
         } else {
-            val newToVisit = yetNotVisited.flatMap { (x, y) ->
-                moves.map { (dx, dy) ->
+            val newToVisit = yetNotVisited.asSequence().flatMap { (x, y) ->
+                moves.asSequence().map { (dx, dy) ->
                     Pair(x+dx, y+dy)
                 }.filter { (newX, newY) ->
                     newX>-1 && newY>-1 && newX<data.size && newY<data[0]!!.size
