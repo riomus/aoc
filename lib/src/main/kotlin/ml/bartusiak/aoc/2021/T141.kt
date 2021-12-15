@@ -22,8 +22,7 @@ open class T141 : AOCTask {
             val extracted = it.split("->").map { it.trim() }
             Pair(extracted[0], extracted[1])
         }.toMap()
-        val result: Long = count(polymer, instructions, steps)
-        return result
+        return count(polymer, instructions, steps)
     }
 
     private fun count(polymer: List<String>, instructions: Map<String, String>, steps: Int): Long {
