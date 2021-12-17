@@ -3,8 +3,6 @@ package ml.bartusiak.aoc.`2021`
 import ml.bartusiak.aoc.AOCTask
 import java.util.*
 
-import kotlin.reflect.KFunction1
-
 data class Packet(val version: Int, val typeId: Int, val subPackets: List<Packet>, val literals: List<Long>) {
 
     fun sumVersions(): Int = version + subPackets.sumOf { it.sumVersions() }
