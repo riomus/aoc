@@ -1,22 +1,17 @@
 package ml.bartusiak.aoc.`2021`
 
 import ml.bartusiak.aoc.AOCTask
-import kotlin.math.abs
-import kotlin.math.max
-import kotlin.math.min
-import kotlin.math.sign
 
-import kotlin.reflect.KFunction1
-open class T91: AOCTask{
+open class T91 : AOCTask {
 
     companion object {
         fun solve(file: String = "T9.txt"): Int = T91().solve(file)
     }
 
-    val moves = listOf(Pair(1,0), Pair(0,1)).flatMap { listOf(it, Pair(it.first*-1, it.second*-1)) }
-    open fun solve(file: String ): Int {
+    val moves = listOf(Pair(1, 0), Pair(0, 1)).flatMap { listOf(it, Pair(it.first * -1, it.second * -1)) }
+    open fun solve(file: String): Int {
         val minimas = extractMinimas(extractMap(file))
-        return minimas.map{it.third+1}.sum()
+        return minimas.map { it.third + 1 }.sum()
     }
 
     fun extractMap(file: String) = data(file)

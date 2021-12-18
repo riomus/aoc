@@ -14,9 +14,9 @@ data class Packet(val version: Int, val typeId: Int, val subPackets: List<Packet
             1 -> subPackets.fold(1) { acc, p -> acc * p.value() }
             2 -> subPackets.minOf { it.value() }
             3 -> subPackets.maxOf { it.value() }
-            5 -> if (subPackets[0]!!.value() > subPackets[1]!!.value()) 1L else 0L
-            6 -> if (subPackets[0]!!.value() < subPackets[1]!!.value()) 1L else 0L
-            7 -> if (subPackets[0]!!.value() == subPackets[1]!!.value()) 1L else 0L
+            5 -> if (subPackets[0].value() > subPackets[1].value()) 1L else 0L
+            6 -> if (subPackets[0].value() < subPackets[1].value()) 1L else 0L
+            7 -> if (subPackets[0].value() == subPackets[1].value()) 1L else 0L
             else -> throw Exception("WaT! Type id unknown $typeId")
         }
     }
@@ -56,7 +56,7 @@ open class T161 : AOCTask {
             var lastPacket = newData.poll(5)
             var literals = emptyList<Int>().toMutableList()
             literals.addAll(lastPacket.drop(1))
-            while (lastPacket.first()!! != 0) {
+            while (lastPacket.first() != 0) {
                 lastPacket = newData.poll(5)
                 literals.addAll(lastPacket.drop(1))
             }

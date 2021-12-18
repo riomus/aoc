@@ -3,7 +3,7 @@ package ml.bartusiak.aoc.`2021`
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
-class T7Test: StringSpec({
+class T7Test : StringSpec({
 
 
     "T71 should return correct result for test data" {

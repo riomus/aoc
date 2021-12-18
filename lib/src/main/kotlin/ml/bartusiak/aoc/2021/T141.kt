@@ -1,12 +1,6 @@
 package ml.bartusiak.aoc.`2021`
 
 import ml.bartusiak.aoc.AOCTask
-import kotlin.math.abs
-import kotlin.math.max
-import kotlin.math.min
-import kotlin.math.sign
-
-import kotlin.reflect.KFunction1
 
 open class T141 : AOCTask {
 
@@ -34,8 +28,14 @@ open class T141 : AOCTask {
                 val firstKey = instruction.key.first().toString() + instruction.value
                 val secondKey = instruction.value + instruction.key.last().toString()
                 currentStepCounters +
-                        Pair(firstKey, (currentStepCounters[firstKey] ?: 0L) + (currentCounters[instruction.key] ?: 0L)) +
-                        Pair(secondKey, (currentStepCounters[secondKey] ?: 0L) + (currentCounters[instruction.key] ?: 0L)) +
+                        Pair(
+                            firstKey,
+                            (currentStepCounters[firstKey] ?: 0L) + (currentCounters[instruction.key] ?: 0L)
+                        ) +
+                        Pair(
+                            secondKey,
+                            (currentStepCounters[secondKey] ?: 0L) + (currentCounters[instruction.key] ?: 0L)
+                        ) +
                         Pair(
                             instruction.value,
                             (currentStepCounters[instruction.value] ?: 0L) + (currentCounters[instruction.key] ?: 0L)

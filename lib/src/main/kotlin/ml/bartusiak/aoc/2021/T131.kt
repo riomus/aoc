@@ -4,6 +4,7 @@ import ml.bartusiak.aoc.AOCTask
 
 typealias Page = List<Pair<Int, Int>>
 typealias Instruction = Pair<String, Int>
+
 open class T131 : AOCTask {
 
 
@@ -38,7 +39,7 @@ open class T131 : AOCTask {
             .map { Pair(it[0], it[1].toInt()) }
     }
 
-    fun Instruction.fold(data:Page): Page {
+    fun Instruction.fold(data: Page): Page {
         val selector = if (this.first == "x") {
             Pair<Int, Int>::first
         } else {

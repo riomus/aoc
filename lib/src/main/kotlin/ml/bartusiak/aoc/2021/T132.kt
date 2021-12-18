@@ -1,6 +1,6 @@
 package ml.bartusiak.aoc.`2021`
 
-open class T132: T131(){
+open class T132 : T131() {
 
     companion object {
         fun solve(file: String = "T13.txt"): String = T132().solveT2(file)
@@ -16,10 +16,10 @@ open class T132: T131(){
         val maxX = folded.maxOf { it.first }
         val maxY = folded.maxOf { it.second }
 
-        val result = (0 .. maxY+1).joinToString("\n"){ y->
-            (0 .. maxX+1).joinToString(""){x ->
-                if(folded.contains(Pair(x, y))){
-                   "#"
+        val result = (0..maxY + 1).joinToString("\n") { y ->
+            (0..maxX + 1).joinToString("") { x ->
+                if (folded.contains(Pair(x, y))) {
+                    "#"
                 } else {
                     "."
                 }
