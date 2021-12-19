@@ -72,7 +72,7 @@ data class SnailPair(val left: SnailfishNumber, val right: SnailfishNumber) : Sn
         val exploded = explode(level)
         return when (exploded) {
             is NoOp -> null
-            is AddOp -> exploded.newChild as SnailPair
+            is AddOp  -> if(exploded.newChild is SnailPair){exploded.newChild} else {throw Exception("You should newer be here")}
         }
     }
 
