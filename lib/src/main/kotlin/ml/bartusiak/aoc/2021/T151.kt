@@ -3,6 +3,11 @@ package ml.bartusiak.aoc.`2021`
 import ml.bartusiak.aoc.AOCTask
 import java.util.*
 
+data class DjikstraState(
+    val unvisitedQueue: PriorityQueue<Pair<Pair<Int, Int>, Long>>, val unvisitedNodes: MutableSet<Pair<Int, Int>>,
+    val distances: MutableMap<Pair<Int, Int>, Long>, val currentNode: Pair<Int, Int>?
+)
+
 open class T151 : AOCTask {
 
     val moves: Sequence<Pair<Int, Int>> =
@@ -11,11 +16,6 @@ open class T151 : AOCTask {
     companion object {
         fun solve(file: String = "T15.txt"): Long = T151().solve(file)
     }
-
-    data class DjikstraState(
-        val unvisitedQueue: PriorityQueue<Pair<Pair<Int, Int>, Long>>, val unvisitedNodes: MutableSet<Pair<Int, Int>>,
-        val distances: MutableMap<Pair<Int, Int>, Long>, val currentNode: Pair<Int, Int>?
-    )
 
     open fun solve(file: String): Long {
         val map: Map<Pair<Int, Int>, Int> = loadMap(file)
