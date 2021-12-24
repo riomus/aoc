@@ -51,11 +51,11 @@ open class T231 : AOCTask {
 
 
     data class Node(val state: GameState, val distance: Long){
-        fun generateNeighbourNodes(): Set<Node>{
+        fun generateNeighbourNodes(): Sequence<Node>{
             val hallwaySpots = listOf(0, 1, 3, 5, 7, 9, 10)
             val destinations = mapOf("A" to 2, "B" to 4, "C" to 6, "D" to 8)
             //From room to hallway and room to room
-            val roomMoves: Set<Node> = state.rooms.entries.flatMap{ col: Map.Entry<Int, Map<Int, Amiphipod>> ->
+            val roomMoves: Sequence<Node> = state.rooms.entries.asSequence().flatMap{ col: Map.Entry<Int, Map<Int, Amiphipod>> ->
                 val x = col.key
                 col.value.entries.flatMap { row: Map.Entry<Int, Amiphipod> ->
                     val y = row.key
@@ -63,14 +63,14 @@ open class T231 : AOCTask {
                     val destination = destinations[amiphipod.kind]!!
                     val roomsWithoutIt = state.rooms+Pair(x, col.value-y)
                     if(x==destination && col.value.values.all { it.kind==amiphipod.kind }){ // already is where should be
-                        listOf()
+                        emptyList()
                     } else if(state.rooms[destination]!!.map { it.value }.all { amp -> amp.kind==amiphipod.kind}) { // can go to destination
                         val isBlockedOnHallwayPath = (min(destination, x)..max(destination, x)).any{state.hallway.get(it)!=null}
                         val isBlockedOnColumnPath = (0..y).any{(col.value[it]?.kind?:amiphipod.kind)!=amiphipod.kind}
                         if(isBlockedOnHallwayPath||isBlockedOnColumnPath){
-                            listOf()
+                            emptyList()
                         } else {
-                            (0..state.roomsSize-1).filter{roomsWithoutIt[destination]!![it]==null}.map{ yDestination ->
+                            (0 until state.roomsSize).filter{roomsWithoutIt[destination]!![it]==null}.map{ yDestination ->
                                 val pathDistance: Long = (y+1+abs(destination-x)+yDestination+1)*amiphipod.moveCost
                                 Node(GameState(state.hallway, roomsWithoutIt+Pair(destination, roomsWithoutIt[destination]!!+Pair(yDestination, amiphipod)), state.roomsSize), distance+pathDistance)
                             }
@@ -80,7 +80,7 @@ open class T231 : AOCTask {
                             val isBlockedOnHallwayPath = (min(possibleDestination, x)..max(possibleDestination, x)).any{state.hallway.get(it)!=null}
                             val isBlockedOnColumnPath = (0..y).any{(col.value[it]?.kind?:amiphipod.kind)!=amiphipod.kind}
                             if(isBlockedOnHallwayPath||isBlockedOnColumnPath){
-                                listOf()
+                                emptyList()
                             } else {
                                 val pathDistance: Long = (y+1+abs(possibleDestination-x))*amiphipod.moveCost
                                 listOf(Node(GameState(state.hallway+Pair(possibleDestination, amiphipod), roomsWithoutIt, state.roomsSize), distance+pathDistance))
@@ -88,23 +88,23 @@ open class T231 : AOCTask {
                         }
                     }
                 }
-            }.toSet()
+            }
             //From hallway to room
-            val hallwayMoves: Set<Node> = state.hallway.entries.flatMap { hallwaySpot ->
+            val hallwayMoves: Sequence<Node> = state.hallway.entries.asSequence().flatMap { hallwaySpot ->
                 val x = hallwaySpot.key
                 val amiphipod = hallwaySpot.value
                 val destination = destinations[amiphipod.kind]!!
                 val isBlockedOnHallwayPath = (min(destination, x+1)..max(destination, x-1)).any{state.hallway.get(it)!=null}
                 val isBlockedOnColumnPath = (0..state.roomsSize).any{(state.rooms[destination]!![it]?.kind?:amiphipod.kind)!=amiphipod.kind}
                 if(isBlockedOnHallwayPath||isBlockedOnColumnPath){
-                    listOf()
+                    emptyList()
                 } else {
-                    (0..state.roomsSize-1).filter{state.rooms[destination]!![it]==null}.map{ y ->
+                    (0 until state.roomsSize).filter{state.rooms[destination]!![it]==null}.map{ y ->
                         val pathDistance: Long = (y+1+abs(destination-x))*amiphipod.moveCost
                         Node(GameState(state.hallway-x, state.rooms+Pair(destination, state.rooms[destination]!!+Pair(y, amiphipod)), state.roomsSize), distance+pathDistance)
                     }
                 }
-            }.toSet()
+            }
             return hallwayMoves+roomMoves
         }
     }
@@ -141,7 +141,7 @@ open class T231 : AOCTask {
         val (unvisitedQueue, visitedStates, distances: MutableMap<GameState, Long>, currentNode) = state
         return if (currentNode != null) {
 
-            val unvisitedNeighbours: Set<Node> = currentNode.generateNeighbourNodes()
+            val unvisitedNeighbours: Sequence<Node> = currentNode.generateNeighbourNodes()
             val unvisitedDistances = unvisitedNeighbours.filter { it.distance < distances[it.state]?:Long.MAX_VALUE }
             unvisitedDistances.forEach { pair ->
                 unvisitedQueue.add(pair)
