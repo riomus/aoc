@@ -4,7 +4,7 @@ open class T182 : T181() {
 
 
     companion object {
-        fun solve(file: String = "T17.txt"): Long = T182().solve(file)
+        fun solve(file: String = "2021/T17.txt"): Long = T182().solve(file)
     }
 
     override fun solve(file: String): Long {

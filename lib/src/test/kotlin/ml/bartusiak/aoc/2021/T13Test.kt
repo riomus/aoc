@@ -6,13 +6,13 @@ import io.kotest.matchers.shouldBe
 class T13Test : StringSpec({
 
     "T131 should return correct result for test data" {
-        T131.solve("T13_test.txt") shouldBe 17
+        T131.solve("2021/T13_test.txt") shouldBe 17
     }
     "T131 should return correct result" {
-        T131.solve("T13.txt") shouldBe 708
+        T131.solve("2021/T13.txt") shouldBe 708
     }
     "T132 should return correct result for test data" {
-        T132.solve("T13_test.txt") shouldBe
+        T132.solve("2021/T13_test.txt") shouldBe
                 """#####.
                   |#...#.
                   |#...#.
@@ -21,7 +21,7 @@ class T13Test : StringSpec({
                   |......""".trimMargin()
     }
     "T132 should return correct result" {
-        T132.solve("T13.txt") shouldBe
+        T132.solve("2021/T13.txt") shouldBe
                 """####.###..#....#..#.###..###..####.#..#.
                                       |#....#..#.#....#..#.#..#.#..#.#....#..#.
                                       |###..###..#....#..#.###..#..#.###..####.

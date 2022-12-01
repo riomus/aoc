@@ -52,7 +52,7 @@ open class T191 : AOCTask {
 
 
     companion object {
-        fun solve(file: String = "T19.txt", minimalCommon: Int = 12): Long = T191().solve(file, minimalCommon)
+        fun solve(file: String = "2021/T19.txt", minimalCommon: Int = 12): Long = T191().solve(file, minimalCommon)
     }
 
     open fun solve(file: String, minimalCommon: Int): Long {

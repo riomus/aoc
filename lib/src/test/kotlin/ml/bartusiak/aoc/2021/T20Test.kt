@@ -7,7 +7,7 @@ class T20Test : StringSpec({
 
 
     "T201 should return correct result for test data" {
-        T201.solve("T20_test.txt") shouldBe 35L
+        T201.solve("2021/T20_test.txt") shouldBe 35L
     }
 
     "T201 should return correct result" {
@@ -15,15 +15,15 @@ class T20Test : StringSpec({
     }
 
     "T202 should return correct result for test data" {
-        T202.solve("T20_test.txt", 50) shouldBe 3351L
+        T202.solve("2021/T20_test.txt", 50) shouldBe 3351L
     }
 
     "T202 should return correct result " {
-        T202.solve("T20.txt") shouldBe 18516
+        T202.solve("2021/T20.txt") shouldBe 18516
     }
 
 
     "T202 should return correct result for conway " {
-        T202.solve("T20_conway.txt") shouldBe 64L
+        T202.solve("2021/T20_conway.txt") shouldBe 64L
     }
 })

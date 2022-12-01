@@ -10,7 +10,7 @@ import kotlin.math.min
 open class T231 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T23.txt"): Long = T231().solve(file)
+        fun solve(file: String = "2021/T23.txt"): Long = T231().solve(file)
     }
 
     val A = Amiphipod("A", 1L)

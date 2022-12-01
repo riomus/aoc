@@ -3,7 +3,7 @@ package ml.bartusiak.aoc.`2021`
 open class T132 : T131() {
 
     companion object {
-        fun solve(file: String = "T13.txt"): String = T132().solveT2(file)
+        fun solve(file: String = "2021/T13.txt"): String = T132().solveT2(file)
     }
 
     fun solveT2(file: String): String {

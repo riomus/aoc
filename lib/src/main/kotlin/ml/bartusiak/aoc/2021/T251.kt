@@ -10,7 +10,7 @@ import kotlin.math.min
 open class T251 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T251.txt"): Long = T251().solve(file)
+        fun solve(file: String = "2021/T251.txt"): Long = T251().solve(file)
     }
 
 

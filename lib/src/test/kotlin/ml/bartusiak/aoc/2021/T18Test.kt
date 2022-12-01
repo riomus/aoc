@@ -59,33 +59,33 @@ class T18Test : StringSpec({
     }
 //
     "T181 should correctly sum 6" {
-        T181().sum("T18_test_sum_6.txt") shouldBe T181().parseNumber("[[[[5,0],[7,4]],[5,5]],[6,6]]").first
+        T181().sum("2021/T18_test_sum_6.txt") shouldBe T181().parseNumber("[[[[5,0],[7,4]],[5,5]],[6,6]]").first
     }
 
     "T181 should correctly sum 5" {
-        T181().sum("T18_test_sum_5.txt") shouldBe T181().parseNumber("[[[[3,0],[5,3]],[4,4]],[5,5]]").first
+        T181().sum("2021/T18_test_sum_5.txt") shouldBe T181().parseNumber("[[[[3,0],[5,3]],[4,4]],[5,5]]").first
     }
 
     "T181 should correctly sum 4" {
-        T181().sum("T18_test_sum_4.txt") shouldBe T181().parseNumber("[[[[1,1],[2,2]],[3,3]],[4,4]]").first
+        T181().sum("2021/T18_test_sum_4.txt") shouldBe T181().parseNumber("[[[[1,1],[2,2]],[3,3]],[4,4]]").first
     }
 
     "T181 should correctly sum simple" {
-        T181().sum("T18_test_sum_simple.txt") shouldBe T181().parseNumber("[[[[0,7],4],[[7,8],[6,0]]],[8,1]]").first
+        T181().sum("2021/T18_test_sum_simple.txt") shouldBe T181().parseNumber("[[[[0,7],4],[[7,8],[6,0]]],[8,1]]").first
     }
 
     "T181 should correctly sum s1" {
-        T181().sum("T18_test_sum_s1.txt") shouldBe T181().parseNumber("[[[[4,0],[5,4]],[[7,7],[6,0]]],[[8,[7,7]],[[7,9],[5,0]]]]").first
+        T181().sum("2021/T18_test_sum_s1.txt") shouldBe T181().parseNumber("[[[[4,0],[5,4]],[[7,7],[6,0]]],[[8,[7,7]],[[7,9],[5,0]]]]").first
     }
 
     "T181 should return correct result" {
-        T181.solve("T18.txt") shouldBe 4057L
+        T181.solve("2021/T18.txt") shouldBe 4057L
     }
     "T182 should return correct result for test data" {
-        T182.solve("T18_test.txt") shouldBe 3993
+        T182.solve("2021/T18_test.txt") shouldBe 3993
     }
     "T182 should return correct result" {
-        T182.solve("T18.txt") shouldBe 4683L
+        T182.solve("2021/T18.txt") shouldBe 4683L
     }
 
 })

@@ -7,7 +7,7 @@ class T9Test : StringSpec({
 
 
     "T91 should return correct result for test data" {
-        T91.solve("T9_test.txt") shouldBe 15
+        T91.solve("2021/T9_test.txt") shouldBe 15
     }
 
     "T91 should return correct result" {
@@ -17,7 +17,7 @@ class T9Test : StringSpec({
 
 
     "T92 should return correct result for test data" {
-        T92.solve("T9_test.txt") shouldBe 1134
+        T92.solve("2021/T9_test.txt") shouldBe 1134
     }
 
 

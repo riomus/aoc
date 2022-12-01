@@ -4,7 +4,7 @@ import ml.bartusiak.aoc.AOCTask
 
 object T61 : AOCTask {
 
-    fun solve(file: String = "T6.txt", days: Int = 80): Long {
+    fun solve(file: String = "2021/T6.txt", days: Int = 80): Long {
         val population: Map<Int, Long> =
             data(file).flatMap { line -> line.split(",") }.map { it.toInt() }.groupingBy { it }.eachCount()
                 .mapValues { it.value.toLong() }

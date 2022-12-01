@@ -4,7 +4,7 @@ class T92 : T91() {
 
 
     companion object {
-        fun solve(file: String = "T9.txt"): Int = T92().solve(file)
+        fun solve(file: String = "2021/T9.txt"): Int = T92().solve(file)
     }
 
     override fun solve(file: String): Int {

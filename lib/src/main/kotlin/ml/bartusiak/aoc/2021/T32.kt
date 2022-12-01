@@ -7,7 +7,7 @@ object T32 : AOCTask {
 
     data class Line(val direction: String, val distance: Int)
 
-    fun solve(file: String = "T3.txt"): Int {
+    fun solve(file: String = "2021/T3.txt"): Int {
         val lines: List<List<Int>> = data(file).map {
             it.toList().map(Char::digitToInt)
         }

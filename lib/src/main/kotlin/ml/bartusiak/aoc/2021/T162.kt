@@ -5,7 +5,7 @@ import java.util.*
 open class T162 : T161() {
 
     companion object {
-        fun solve(file: String = "T16.txt"): Long = T162().solve(file)
+        fun solve(file: String = "2021/T16.txt"): Long = T162().solve(file)
     }
 
     override fun solve(file: String): Long {

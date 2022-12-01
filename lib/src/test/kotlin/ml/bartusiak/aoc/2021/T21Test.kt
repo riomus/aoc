@@ -7,7 +7,7 @@ class T21Test : StringSpec({
 
 
     "T211 should return correct result for test data" {
-        T211.solve("T21_test.txt") shouldBe 739785L
+        T211.solve("2021/T21_test.txt") shouldBe 739785L
     }
 
     "T211 should return correct result" {
@@ -15,11 +15,11 @@ class T21Test : StringSpec({
     }
 
     "T212 should return correct result for test data" {
-        T212.solve("T21_test.txt") shouldBe 444356092776315L
+        T212.solve("2021/T21_test.txt") shouldBe 444356092776315L
     }
 
     "T212 should return correct result " {
-        T212.solve("T21.txt") shouldBe 301304993766094L
+        T212.solve("2021/T21.txt") shouldBe 301304993766094L
     }
 
 

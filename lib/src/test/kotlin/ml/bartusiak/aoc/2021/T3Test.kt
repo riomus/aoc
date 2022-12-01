@@ -10,7 +10,7 @@ class T3Test : StringSpec({
     }
 
     "T32 should return correct result for test data" {
-        T32.solve("T3_test.txt") shouldBe 230
+        T32.solve("2021/T3_test.txt") shouldBe 230
     }
     "T32 should return correct result" {
         T32.solve() shouldBe 1032597

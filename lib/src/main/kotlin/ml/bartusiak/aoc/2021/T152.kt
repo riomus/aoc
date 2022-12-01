@@ -3,7 +3,7 @@ package ml.bartusiak.aoc.`2021`
 open class T152 : T151() {
 
     companion object {
-        fun solve(file: String = "T15.txt"): Long = T152().solve(file)
+        fun solve(file: String = "2021/T15.txt"): Long = T152().solve(file)
     }
 
     operator fun Pair<Int, Int>.times(other: Int): Pair<Int, Int> {

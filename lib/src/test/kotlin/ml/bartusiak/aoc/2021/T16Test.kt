@@ -7,7 +7,7 @@ import java.util.*
 class T16Test : StringSpec({
 
     "T161 should return correct result for simple test data" {
-        T161.solve("T16_test_simple.txt") shouldBe 20
+        T161.solve("2021/T16_test_simple.txt") shouldBe 20
     }
     "T161 should correctly read literal packer" {
         val result = T161().readNextPacket(
@@ -22,13 +22,13 @@ class T16Test : StringSpec({
         packet.literals.first() shouldBe 2021
     }
     "T161 should return correct result" {
-        T161.solve("T16.txt") shouldBe 1012
+        T161.solve("2021/T16.txt") shouldBe 1012
     }
     "T162 should return correct result for test data" {
-        T162.solve("T16_test_simple.txt") shouldBe 1
+        T162.solve("2021/T16_test_simple.txt") shouldBe 1
     }
     "T162 should return correct result" {
-        T162.solve("T16.txt") shouldBe 2223947372407L
+        T162.solve("2021/T16.txt") shouldBe 2223947372407L
     }
 
 })

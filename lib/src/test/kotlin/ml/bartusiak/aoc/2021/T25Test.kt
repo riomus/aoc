@@ -8,13 +8,13 @@ class T25Test : StringSpec({
 
 
     "T251 should return correct result for test data" {
-        val result = T251.solve("T251_test.txt")
+        val result = T251.solve("2021/T251_test.txt")
         result shouldNotBe  98399959992947
         result shouldBe  58L
     }
 
     "T251 should return correct result" {
-        val result = T251.solve("T251.txt")
+        val result = T251.solve("2021/T251.txt")
         result shouldBe  509L
     }
 

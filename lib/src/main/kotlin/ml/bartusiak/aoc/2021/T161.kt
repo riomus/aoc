@@ -27,7 +27,7 @@ data class ParsingState(val data: LinkedList<Int>, val packets: List<Packet>)
 open class T161 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T16.txt"): Long = T161().solve(file)
+        fun solve(file: String = "2021/T16.txt"): Long = T161().solve(file)
     }
 
     open fun solve(file: String): Long {

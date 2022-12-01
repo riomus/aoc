@@ -7,12 +7,12 @@ class T19Test : StringSpec({
 
 
     "T191 should return correct result for test data" {
-        T191.solve("T19_test.txt") shouldBe 79
+        T191.solve("2021/T19_test.txt") shouldBe 79
     }
 
 
     "T191 should return correct result for small test data" {
-        T191.solve("T19_test_small.txt", 6) shouldBe 6L
+        T191.solve("2021/T19_test_small.txt", 6) shouldBe 6L
     }
 
     "T191 should return correct result" {
@@ -22,11 +22,11 @@ class T19Test : StringSpec({
 
 
     "T192 should return correct result for test data" {
-        T192.solve("T19_test.txt") shouldBe 3621L
+        T192.solve("2021/T19_test.txt") shouldBe 3621L
     }
 
 
     "T192 should return correct result " {
-        T192.solve("T19.txt") shouldBe 13332L
+        T192.solve("2021/T19.txt") shouldBe 13332L
     }
 })

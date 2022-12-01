@@ -5,7 +5,7 @@ import ml.bartusiak.aoc.AOCTask
 open class T101 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T10.txt"): Long = T101().solve(file)
+        fun solve(file: String = "2021/T10.txt"): Long = T101().solve(file)
     }
 
     val pairs = mapOf("[" to "]", "(" to ")", "{" to "}", "<" to ">")

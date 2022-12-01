@@ -9,7 +9,7 @@ import kotlin.math.floor
 open class T202 : T201() {
 
     companion object {
-        fun solve(file: String = "T20.txt", steps: Int =50): Long = T202().solve(file, steps)
+        fun solve(file: String = "2021/T20.txt", steps: Int =50): Long = T202().solve(file, steps)
     }
 
 

@@ -5,7 +5,7 @@ import kotlin.math.abs
 
 object T72 : AOCTask {
 
-    fun solve(file: String = "T7.txt"): Int {
+    fun solve(file: String = "2021/T7.txt"): Int {
         val crabs = data(file).flatMap { it.split(",") }.map { it.toInt() }
         val min: Int = crabs.minOrNull()!!
         val max: Int = crabs.maxOrNull()!!

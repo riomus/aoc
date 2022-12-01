@@ -10,7 +10,7 @@ open class T192 : T191() {
 
 
     companion object {
-        fun solve(file: String = "T19.txt", minimalCommon: Int=12): Long = T192().solve(file, minimalCommon)
+        fun solve(file: String = "2021/T19.txt", minimalCommon: Int=12): Long = T192().solve(file, minimalCommon)
     }
 
     override fun solve(file: String, minimalCommon: Int): Long {

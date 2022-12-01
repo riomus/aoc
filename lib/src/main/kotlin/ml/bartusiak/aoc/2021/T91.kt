@@ -5,7 +5,7 @@ import ml.bartusiak.aoc.AOCTask
 open class T91 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T9.txt"): Int = T91().solve(file)
+        fun solve(file: String = "2021/T9.txt"): Int = T91().solve(file)
     }
 
     val moves = listOf(Pair(1, 0), Pair(0, 1)).flatMap { listOf(it, Pair(it.first * -1, it.second * -1)) }

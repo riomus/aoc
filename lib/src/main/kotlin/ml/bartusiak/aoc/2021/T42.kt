@@ -4,7 +4,7 @@ import ml.bartusiak.aoc.AOCTask
 
 object T42 : AOCTask {
 
-    fun solve(file: String = "T4.txt"): Int {
+    fun solve(file: String = "2021/T4.txt"): Int {
         val lines = data(file)
         val draws = lines.first().split(",").map(String::toInt)
         val loadedBoards: List<Board> = lines.drop(1).filter { it.isNotEmpty() }.chunked(5).map { it ->

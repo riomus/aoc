@@ -27,7 +27,7 @@ object T51 : AOCTask {
 
     }
 
-    fun solve(file: String = "T5.txt", includeDiagonal: Boolean = false): Int {
+    fun solve(file: String = "2021/T5.txt", includeDiagonal: Boolean = false): Int {
         val ventLines: List<Line> = data(file).map { line ->
             val lineData = line.split(" -> ").map { linePart -> linePart.split(",").map { it.toInt() } }
             Line(lineData[0][0], lineData[0][1], lineData[1][0], lineData[1][1])

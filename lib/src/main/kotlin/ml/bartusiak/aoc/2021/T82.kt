@@ -8,7 +8,7 @@ object T82 : AOCTask {
     val uniques = mapOf<Int, Int>(1 to 2, 4 to 4, 7 to 3, 8 to 7)
     val sizeToDigit = uniques.entries.associate { (k, v) -> v to k }
 
-    fun solve(file: String = "T8.txt"): Int {
+    fun solve(file: String = "2021/T8.txt"): Int {
         val observations = data(file).map {
             it.trim().split("|")
                 .map { it.trim().split(" ").map { it.trim().toCharArray().map { it.toString() } }.map { it.toSet() } }

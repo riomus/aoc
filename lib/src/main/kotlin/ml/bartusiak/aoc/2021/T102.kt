@@ -3,7 +3,7 @@ package ml.bartusiak.aoc.`2021`
 open class T102 : T101() {
 
     companion object {
-        fun solve(file: String = "T10.txt"): Long = T102().solve(file)
+        fun solve(file: String = "2021/T10.txt"): Long = T102().solve(file)
     }
 
     val completitionPoints = mapOf("]" to 2, ")" to 1, "}" to 3, ">" to 4)

@@ -12,7 +12,7 @@ typealias CacheKey = Pair<Int, List<T241.Instruction>>
 open class T241 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T24.txt"): Long = T241().solve(file)
+        fun solve(file: String = "2021/T24.txt"): Long = T241().solve(file)
     }
 
     open fun solve(file: String): Long{

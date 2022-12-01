@@ -23,7 +23,7 @@ data class Cuboid(val x: Range, val y: Range, val z: Range){
 open class T222 : T221() {
 
     companion object {
-        fun solve(file: String = "T21.txt"): Long = T222().solve(file)
+        fun solve(file: String = "2021/T21.txt"): Long = T222().solve(file)
     }
 
     override fun solve(file: String): Long {

@@ -3,7 +3,7 @@ package ml.bartusiak.aoc.`2021`
 open class T172 : T171() {
 
     companion object {
-        fun solve(file: String = "T17.txt"): Long = T172().solve(file)
+        fun solve(file: String = "2021/T17.txt"): Long = T172().solve(file)
     }
 
     override fun solve(file: String): Long {

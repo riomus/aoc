@@ -18,7 +18,7 @@ typealias Point = Triple<Long, Long, Long>
 open class T221 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T22.txt"): Long = T221().solve(file)
+        fun solve(file: String = "2021/T22.txt"): Long = T221().solve(file)
     }
 
 

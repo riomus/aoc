@@ -9,7 +9,7 @@ open class T131 : AOCTask {
 
 
     companion object {
-        fun solve(file: String = "T13.txt"): Int = T131().solve(file)
+        fun solve(file: String = "2021/T13.txt"): Int = T131().solve(file)
     }
 
 

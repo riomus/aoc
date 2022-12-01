@@ -5,7 +5,7 @@ import ml.bartusiak.aoc.AOCTask
 open class T121 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T12.txt"): Int = T121().solve(file, false)
+        fun solve(file: String = "2021/T12.txt"): Int = T121().solve(file, false)
     }
 
 

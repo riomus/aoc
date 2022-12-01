@@ -8,7 +8,7 @@ object T31 : AOCTask {
     data class Line(val direction: String, val distance: Int)
 
     fun solve(): Int {
-        val lines = data("T3.txt").map {
+        val lines = data("2021/T3.txt").map {
             it.toList().map(Char::digitToInt)
         }
         val size = lines.size

@@ -10,7 +10,7 @@ import kotlin.math.min
 open class T242 : T241() {
 
     companion object {
-        fun solve(file: String = "T24.txt"): Long = T242().solve(file)
+        fun solve(file: String = "2021/T24.txt"): Long = T242().solve(file)
     }
 
 

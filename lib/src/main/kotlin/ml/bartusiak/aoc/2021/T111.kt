@@ -5,7 +5,7 @@ import ml.bartusiak.aoc.AOCTask
 open class T111 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T11.txt", steps: Int = 100): Int = T111().solve(file, steps)
+        fun solve(file: String = "2021/T11.txt", steps: Int = 100): Int = T111().solve(file, steps)
     }
 
 

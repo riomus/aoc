@@ -7,7 +7,7 @@ class T10Test : StringSpec({
 
 
     "T101 should return correct result for test data" {
-        T101.solve("T10_test.txt") shouldBe 26397L
+        T101.solve("2021/T10_test.txt") shouldBe 26397L
     }
 
     "T101 should return correct result" {
@@ -17,7 +17,7 @@ class T10Test : StringSpec({
 
 
     "T102 should return correct result for test data" {
-        T102.solve("T10_test.txt") shouldBe 288957L
+        T102.solve("2021/T10_test.txt") shouldBe 288957L
     }
 
 

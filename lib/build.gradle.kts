@@ -1,6 +1,6 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.5.31"
-    id("io.kotest") version "0.3.8"
+    id("io.kotest.multiplatform") version "5.0.2"
 }
 
 repositories {

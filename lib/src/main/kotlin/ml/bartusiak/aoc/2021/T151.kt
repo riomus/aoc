@@ -14,7 +14,7 @@ open class T151 : AOCTask {
         listOf(Pair(1, 0), Pair(0, 1)).flatMap { listOf(it, Pair(it.first * -1, it.second * -1)) }.asSequence()
 
     companion object {
-        fun solve(file: String = "T15.txt"): Long = T151().solve(file)
+        fun solve(file: String = "2021/T15.txt"): Long = T151().solve(file)
     }
 
     open fun solve(file: String): Long {

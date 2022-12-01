@@ -47,7 +47,7 @@ operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>): Pair<Int, Int> =
 open class T201 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T20.txt", steps: Int = 2): Long = T201().solve(file, steps)
+        fun solve(file: String = "2021/T20.txt", steps: Int = 2): Long = T201().solve(file, steps)
     }
 
     open fun solve(file: String, steps: Int): Long {

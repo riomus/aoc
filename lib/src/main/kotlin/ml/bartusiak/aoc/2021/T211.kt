@@ -29,7 +29,7 @@ data class GameState(val player1: Player, val playr2: Player,val die: Deteminist
 open class T211 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T21.txt"): Long = T211().solve(file)
+        fun solve(file: String = "2021/T21.txt"): Long = T211().solve(file)
     }
 
     open fun solve(file: String): Long {

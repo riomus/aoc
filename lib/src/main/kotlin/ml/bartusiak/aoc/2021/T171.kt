@@ -18,7 +18,7 @@ data class SimulationStep(
 open class T171 : AOCTask {
 
     companion object {
-        fun solve(file: String = "T17.txt"): Long = T171().solve(file)
+        fun solve(file: String = "2021/T17.txt"): Long = T171().solve(file)
     }
 
     open fun solve(file: String): Long {

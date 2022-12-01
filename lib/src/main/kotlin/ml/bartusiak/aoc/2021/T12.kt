@@ -5,7 +5,7 @@ import ml.bartusiak.aoc.AOCTask
 object T12 : AOCTask {
 
     fun solve(): Int {
-        return data("T1.txt").map {
+        return data("2021/T1.txt").map {
             it.toInt()
         }.windowed(3)
             .map { it.sum() }

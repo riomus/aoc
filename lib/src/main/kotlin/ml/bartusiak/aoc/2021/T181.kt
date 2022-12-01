@@ -148,7 +148,7 @@ open class T181 : AOCTask {
 
 
     companion object {
-        fun solve(file: String = "T17.txt"): Long = T181().solve(file)
+        fun solve(file: String = "2021/T17.txt"): Long = T181().solve(file)
     }
 
     fun List<SnailfishNumber>.sum(): SnailfishNumber = this.reduce { n1, n2 ->

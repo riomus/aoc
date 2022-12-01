@@ -25,7 +25,7 @@ data class DiracGameState(val player1: Player, val playr2: Player){
 open class T212 : T211() {
 
     companion object {
-        fun solve(file: String = "T21.txt"): Long = T212().solve(file)
+        fun solve(file: String = "2021/T21.txt"): Long = T212().solve(file)
     }
 
     operator fun Pair<Long, Long>.plus(other: Pair<Long, Long>) = Pair(this.first+other.first, this.second+other.second)
