@@ -4,6 +4,8 @@ interface AOCTask {
 
     fun data(name: String): List<String> =
         this::class.java.classLoader.getResource(name).readText().trim().split("\n").map { it.trim() }
+    fun dataNoTrim(name: String): List<String> =
+        this::class.java.classLoader.getResource(name).readText().split("\n")
 
 
 }
