@@ -19,10 +19,6 @@ open class T141 : AOCTask {
         operator fun plus(other: PlanePoint): PlanePoint{
             return PlanePoint(x + other.x, y + other.y)
         }
-
-        fun Long.sqr(): Long{
-            return this*this
-        }
     }
 
     sealed interface RockLine{
